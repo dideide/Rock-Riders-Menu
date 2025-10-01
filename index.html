@@ -4,105 +4,254 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Riders Menu</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ----- General Styles ----- */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #e67e22;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* ----- Navbar ----- */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #222;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav ul li:hover {
+      color: #e67e22;
+    }
+
+    /* ----- Hero Section ----- */
+    .hero {
+      height: 400px;
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHJlc3RhdXJhbnQlMjBtZW51fGVufDB8fHx8MTY5Njc4NzEyNw&ixlib=rb-4.0.3&q=80&w=1080') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    /* ----- Menu Items Grid ----- */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-item {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .item-name {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    .item-desc {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .item-price {
+      font-weight: bold;
+      color: #e67e22;
+    }
+
+    /* ----- Footer ----- */
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #e67e22;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <h1>Rock Riders</h1>
-      <ul>
-        <li><a href="#starters">Starters</a></li>
-        <li><a href="#fries">Fries</a></li>
-        <li><a href="#burgers">Burgers</a></li>
-        <li><a href="#pizza">Pizza</a></li>
-        <li><a href="#desserts">Desserts</a></li>
-        <li><a href="#drinks">Drinks</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <div class="logo">Rock Riders</div>
+    <ul>
+      <li onclick="document.getElementById('starters').scrollIntoView({behavior:'smooth'})">Starters</li>
+      <li onclick="document.getElementById('fries').scrollIntoView({behavior:'smooth'})">Fries</li>
+      <li onclick="document.getElementById('burgers').scrollIntoView({behavior:'smooth'})">Burgers</li>
+      <li onclick="document.getElementById('pizza').scrollIntoView({behavior:'smooth'})">Pizza</li>
+      <li onclick="document.getElementById('desserts').scrollIntoView({behavior:'smooth'})">Desserts</li>
+      <li onclick="document.getElementById('drinks').scrollIntoView({behavior:'smooth'})">Drinks</li>
+    </ul>
+  </nav>
 
-  <!-- Hero Banner -->
-  <section class="hero">
-    <h2>Welcome to Rock Riders</h2>
-    <p>Delicious food, made fresh for you 🍔🍕🍟</p>
-  </section>
+  <!-- Hero Section -->
+  <div class="hero">Welcome to Rock Riders</div>
 
   <!-- Menu Sections -->
-  <main>
-    <!-- Starters -->
-    <section id="starters" class="menu-section">
-      <h2>Starters</h2>
-      <div class="menu-grid">
-        <div class="card"><h3>Mozzarella Sticks</h3><p>$5</p></div>
-        <div class="card"><h3>Chicken Strips</h3><p>$8</p></div>
-        <div class="card"><h3>Classic Nachos</h3><p>$7</p></div>
-        <div class="card"><h3>Rock Riders Combo</h3><p>$15</p></div>
+  <div id="starters" class="section">
+    <h2>Starters</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="item-name">Garlic Bread</div>
+        <div class="item-desc">Toasted bread with garlic butter and herbs.</div>
+        <div class="item-price">$5</div>
       </div>
-    </section>
+      <div class="menu-item">
+        <div class="item-name">Chicken Wings</div>
+        <div class="item-desc">Spicy grilled wings served with sauce.</div>
+        <div class="item-price">$8</div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Fries -->
-    <section id="fries" class="menu-section">
-      <h2>Fries & Potatoes</h2>
-      <div class="menu-grid">
-        <div class="card"><h3>French Fries Box</h3><p>$3</p></div>
-        <div class="card"><h3>French Fries Plate</h3><p>$6</p></div>
-        <div class="card"><h3>Loaded Fries</h3><p>$8</p></div>
-        <div class="card"><h3>Classic Baked Potato</h3><p>$6</p></div>
+  <div id="fries" class="section">
+    <h2>Fries & Potatoes</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="item-name">Classic Fries</div>
+        <div class="item-desc">Golden crispy fries with salt.</div>
+        <div class="item-price">$4</div>
       </div>
-    </section>
+      <div class="menu-item">
+        <div class="item-name">Cheese Fries</div>
+        <div class="item-desc">Topped with melted cheddar cheese.</div>
+        <div class="item-price">$6</div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Burgers -->
-    <section id="burgers" class="menu-section">
-      <h2>Burgers</h2>
-      <div class="menu-grid">
-        <div class="card"><h3>Classic Burger</h3><p>$7</p></div>
-        <div class="card"><h3>Cheese It Up</h3><p>$8.5</p></div>
-        <div class="card"><h3>Crunchy Burger</h3><p>$8</p></div>
-        <div class="card"><h3>Swiss Mushroom</h3><p>$10</p></div>
-        <div class="card"><h3>Bacon Jam</h3><p>$11</p></div>
+  <div id="burgers" class="section">
+    <h2>Burgers</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="item-name">Classic Burger</div>
+        <div class="item-desc">Beef patty, lettuce, tomato, cheese.</div>
+        <div class="item-price">$10</div>
       </div>
-    </section>
+      <div class="menu-item">
+        <div class="item-name">Double Cheeseburger</div>
+        <div class="item-desc">Two beef patties with double cheese.</div>
+        <div class="item-price">$12</div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Pizza -->
-    <section id="pizza" class="menu-section">
-      <h2>Pizza</h2>
-      <div class="menu-grid">
-        <div class="card"><h3>Torque</h3><p>$7</p></div>
-        <div class="card"><h3>Hunter</h3><p>$7</p></div>
-        <div class="card"><h3>Blaze</h3><p>$7</p></div>
-        <div class="card"><h3>Thunder</h3><p>$7</p></div>
-        <div class="card"><h3>4X4 (Four Cheese)</h3><p>$8</p></div>
+  <div id="pizza" class="section">
+    <h2>Pizza</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="item-name">Margherita</div>
+        <div class="item-desc">Classic cheese and tomato pizza.</div>
+        <div class="item-price">$11</div>
       </div>
-    </section>
+      <div class="menu-item">
+        <div class="item-name">Pepperoni</div>
+        <div class="item-desc">Cheese, tomato, and pepperoni slices.</div>
+        <div class="item-price">$13</div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Desserts -->
-    <section id="desserts" class="menu-section">
-      <h2>Desserts</h2>
-      <div class="menu-grid">
-        <div class="card"><h3>Pain Perdu</h3><p>$8</p></div>
-        <div class="card"><h3>Crepes</h3><p>$5</p></div>
-        <div class="card"><h3>Tiramisu</h3><p>$5</p></div>
-        <div class="card"><h3>Chocolate Fondant</h3><p>$7</p></div>
+  <div id="desserts" class="section">
+    <h2>Desserts</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="item-name">Chocolate Cake</div>
+        <div class="item-desc">Rich chocolate cake with cream.</div>
+        <div class="item-price">$6</div>
       </div>
-    </section>
+      <div class="menu-item">
+        <div class="item-name">Ice Cream</div>
+        <div class="item-desc">Vanilla, chocolate, or strawberry.</div>
+        <div class="item-price">$5</div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Drinks -->
-    <section id="drinks" class="menu-section">
-      <h2>Drinks</h2>
-      <div class="menu-grid">
-        <div class="card"><h3>Soft Drinks</h3><p>$1.5</p></div>
-        <div class="card"><h3>Ice Tea</h3><p>$1.5</p></div>
-        <div class="card"><h3>RedBull</h3><p>$4</p></div>
-        <div class="card"><h3>Rock Riders Mocktail</h3><p>$6</p></div>
+  <div id="drinks" class="section">
+    <h2>Drinks & Shakes</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="item-name">Coke</div>
+        <div class="item-desc">Classic soda.</div>
+        <div class="item-price">$2</div>
       </div>
-    </section>
-  </main>
+      <div class="menu-item">
+        <div class="item-name">Milkshake</div>
+        <div class="item-desc">Chocolate or vanilla.</div>
+        <div class="item-price">$4</div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Rock Riders | Follow us on Instagram 📸</p>
+    <p>Contact us: 123-456-7890 | info@rockriders.com</p>
+    <p>Follow us: 
+      <a href="#">Instagram</a> | 
+      <a href="#">Facebook</a>
+    </p>
   </footer>
 
 </body>
