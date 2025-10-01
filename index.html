@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Riders</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Landing Section */
+    .landing {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url('https://raw.githubusercontent.com/dideide/Rock-Riders-Menu/main/WhatsApp%20Image%202025-10-01%20at%2004.40.15_a85ad72e.jpg') 
+                  center/cover no-repeat;
+      text-align: center;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .landing h1 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    /* Buttons */
+    .button-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .main-btn {
+      display: inline-block;
+      background-color: #e67e22;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .main-btn:hover {
+      background-color: #cf6e1d;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .landing h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+      .main-btn {
+        width: 80%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="landing">
+    <h1>Welcome to Rock Riders</h1>
+    <div class="button-container">
+      <a href="menu.html" class="main-btn">View Menu</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsqM7Ww-tEuag0LdFd-30S0vPIfoNAJXVPr-N1tKPTcGeI4g/viewform?usp=dialog" 
+         target="_blank" class="main-btn">
+        Feedback
+      </a>
+    </div>
+  </div>
+</body>
+</html>
