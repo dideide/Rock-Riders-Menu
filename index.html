@@ -277,10 +277,6 @@
         <div class="item-price">5$</div>
       </div>
       <div class="menu-item">
-        <div class="item-name">Chicken Strips </div>
-        <div class="item-price">8$</div>
-      </div>
-      <div class="menu-item">
         <div class="item-name">Edamame </div>
         <div class="item-price">4.5$</div>
       </div>
@@ -775,13 +771,14 @@ Habanero Sauce
   }
 
   // Scroll to section and close menu on mobile
-  function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+  <script>
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // close mobile menu if open
     const menu = document.getElementById('menu');
-    if (menu.classList.contains('show')) {
-      menu.classList.remove('show');
-    }
-  }
+    if(menu.classList.contains('show')) menu.classList.remove('show');
+}
+  
 
   // Back to top button
   const backToTop = document.createElement('button');
@@ -804,6 +801,7 @@ Habanero Sauce
 
 </body>
 </html>
+
 
 
 
