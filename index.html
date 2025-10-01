@@ -96,7 +96,7 @@
     /* ----- Hero ----- */
     .hero {
       height: 450px;
-      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHJlc3RhdXJhbnQlMjBtZW51fGVufDB8fHx8MTY5Njc4NzEyNw&ixlib=rb-4.0.3&q=80&w=1080') center/cover no-repeat;
+      background: url('C:\Users\acer\Downloads\WhatsApp Image 2025-10-01 at 04.40.15_a85ad72e.jpg') center/cover no-repeat;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -771,14 +771,13 @@ Habanero Sauce
   }
 
   // Scroll to section and close menu on mobile
-  <script>
-function scrollToSection(id){
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // close mobile menu if open
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
     const menu = document.getElementById('menu');
-    if(menu.classList.contains('show')) menu.classList.remove('show');
-}
-  
+    if (menu.classList.contains('show')) {
+      menu.classList.remove('show');
+    }
+  }
 
   // Back to top button
   const backToTop = document.createElement('button');
@@ -801,6 +800,7 @@ function scrollToSection(id){
 
 </body>
 </html>
+
 
 
 
