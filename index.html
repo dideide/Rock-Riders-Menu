@@ -784,24 +784,16 @@ Habanero Sauce
     const menu = document.getElementById('menu');
     menu.classList.toggle('show');
   }
-function scrollToSection(id) {
-  const section = document.getElementById(id);
 
-  // offset for sticky navbar
-  const yOffset = -70; // adjust based on navbar height
-  const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-  window.scrollTo({ top: y, behavior: 'smooth' });
-
-  // close menu on mobile
-  const menu = document.getElementById('menu');
-  if (menu.classList.contains('show')) {
-    menu.classList.remove('show');
+ 
   // Scroll to section and close menu on mobile
   function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({behavior: 'smooth'});
     const menu = document.getElementById('menu');
-    
+    const yOffset = -70; // adjust based on navbar height
+  const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+  window.scrollTo({ top: y, behavior: 'smooth' });
   }
 
   // Back to top button
@@ -825,6 +817,7 @@ function scrollToSection(id) {
 
 </body>
 </html>
+
 
 
 
