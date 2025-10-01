@@ -106,6 +106,16 @@
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
   text-align: center;
 }
+    @media (max-width: 768px) {
+  .hero {
+    height: auto; /* allow height to adjust */
+    min-height: 250px; /* ensure it’s not too small */
+    background-size: contain; /* show the full image */
+    background-position: top center; /* align it nicely */
+    padding: 50px 10px; /* optional to add some space */
+    font-size: 1.5rem; /* text size adjustment */
+  }
+}
 
     /* ----- Menu Grid ----- */
     .menu-grid {
@@ -800,6 +810,7 @@ Habanero Sauce
 
 </body>
 </html>
+
 
 
 
